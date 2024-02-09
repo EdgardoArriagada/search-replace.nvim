@@ -47,7 +47,7 @@ M.searchAndReplace = function()
 
   if not ok then
     vim.cmd("undo " .. seq_cur)
-    execute("nohlsearch")
+    vim.cmd("nohlsearch")
     return
   end
 
@@ -57,11 +57,11 @@ M.searchAndReplace = function()
 
   if not ok2 and not patternFound then
     vim.cmd("undo " .. seq_cur)
-    execute("nohlsearch")
+    vim.cmd("nohlsearch")
     return
   end
 
-  execute("nohlsearch")
+  vim.cmd("nohlsearch")
 end
 
 return M
